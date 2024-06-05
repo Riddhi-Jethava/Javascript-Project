@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Manager( CRUD )</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Food Recipe</h1>
+            <input type="text" id="search" placeholder="Search...">
+        </div>
+        <div class="recipe-list" id="recipeList">
+        </div>
+        <button id="addBtn">Add Recipe</button>
+    </div>
+
+    <div class="modal" id="recipeModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle">Add Recipe</h2>
+            <form id="recipeForm">
+                <label for="recipeName">Recipe Name:</label>
+                <input type="text" id="recipeName" required><br>
+                <label for="recipeInstructions">Ingredients:</label>
+                <input type="text" id="recipeInstructions" required></input><br>
+                <label for="recipeImage">Image URL:</label>
+                <input type="text" id="recipeImage"><br>
+                <button type="submit" id="saveBtn">Update</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const recipeList = document.getElementById("recipeList");
+            const addBtn = document.getElementById("addBtn");
+            const modal = document.getElementById("recipeModal");
+            const closeBtn = document.querySelector(".close");
+            const recipeForm = document.getElementById("recipeForm");
+            const searchInput = document.getElementById("search");
+
+            let recipes = [];
+
+            if (localStorage.getItem("recipes")) {
+                recipes = JSON.parse(localStorage.getItem("recipes"));
+                displayRecipes(recipes);
+            }
+
+            addBtn.addEventListener("click", () => openModal("Add Recipe"));
+            closeBtn.addEventListener("click", closeModal);
+            recipeForm.addEventListener("submit", saveRecipe);
+            searchInput.addEventListener("input", searchRecipes);
+
+            function openModal(title, index) {
+                modal.style.display = "block";
+                document.getElementById("modalTitle").textContent = title;
+                if (index !== undefined) {
+                    const recipe = recipes[index];
+                    document.getElementById("recipeName").value = recipe.name;
+                    document.getElementById("recipeInstructions").value = recipe.instructions;
+                    document.getElementById("recipeImage").value = recipe.imageUrl;
+                    recipeForm.setAttribute("data-index", index);
+                } else {
+                    recipeForm.reset();
+                    recipeForm.removeAttribute("data-index");
+                }
+            }
+
+            function closeModal() {
+                modal.style.display = "none";
+            }
+
+            function saveRecipe(event) {
+                event.preventDefault();
+                const name = document.getElementById("recipeName").value.trim();
+                const instructions = document.getElementById("recipeInstructions").value.trim();
+                const imageUrl = document.getElementById("recipeImage").value.trim();
+                const index = recipeForm.getAttribute("data-index");
+
+                if (!name || !instructions) {
+                    alert("Please fill in all fields");
+                    return;
+                }
+
+                const recipe = { name, instructions, imageUrl };
+
+                if (index !== null) {
+                    recipes[index] = recipe;
+                } else {
+                    recipes.push(recipe);
+                }
+
+                saveRecipesToLocalStorage();
+                displayRecipes(recipes);
+                closeModal();
+            }
+
+            function displayRecipes(recipesToDisplay) {
+                recipeList.innerHTML = "";
+                recipesToDisplay.forEach((recipe, index) => {
+                    const card = document.createElement("div");
+                    card.classList.add("recipe-card");
+                    card.innerHTML = `
+                <img src="${recipe.imageUrl}" alt="${recipe.name}">
+                <h3>${recipe.name}</h3>
+                <p>${recipe.instructions}</p>
+                <div class="btn-group">
+                    <button class="edit-btn" data-index="${index}">Edit</button>
+                    <button class="delete-btn" data-index="${index}">Delete</button>
+                </div>
+            `;
+                    recipeList.appendChild(card);
+                });
+
+                const editBtns = document.querySelectorAll(".edit-btn");
+                editBtns.forEach(btn => {
+                    btn.addEventListener("click", (event) => {
+                        const index = event.target.dataset.index;
+                        openModal("Edit Recipe", index);
+                    });
+                });
+
+                const deleteBtns = document.querySelectorAll(".delete-btn");
+                deleteBtns.forEach(btn => {
+                    btn.addEventListener("click", (event) => {
+                        const index = event.target.dataset.index;
+                        deleteRecipe(index);
+                    });
+                });
+            }
+
+            function deleteRecipe(index) {
+                recipes.splice(index, 1);
+                saveRecipesToLocalStorage();
+                displayRecipes(recipes);
+            }
+
+            function saveRecipesToLocalStorage() {
+                localStorage.setItem("recipes", JSON.stringify(recipes));
+            }
+
+            function searchRecipes() {
+                const searchTerm = searchInput.value.toLowerCase();
+                const filteredRecipes = recipes.filter(recipe =>
+                    recipe.name.toLowerCase().includes(searchTerm)
+                );
+                displayRecipes(filteredRecipes);
+            }
+        });
+
+    </script>
+</body>
+
+</html>

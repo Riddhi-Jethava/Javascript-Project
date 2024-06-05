@@ -1,0 +1,171 @@
+@media(max-width:992px){
+
+    header{
+        display: none;
+    }
+
+    .header{
+        display: block;
+    }
+
+    #head{
+        display: none;
+    }
+
+    #slid{
+        height: auto;
+    }
+
+    .carousel-cell{
+        height: auto;
+    }
+    .product{
+        width: 100%;
+        /* background-color: black; */
+    }
+
+    footer{
+        width: auto;
+        height: auto;
+        padding: 0px;
+    }
+
+    .fot-1{
+        width: auto;
+        height: auto;
+    }
+    
+    .carousel-cell-1{
+        width: 30%;
+    }
+
+    #jewe{
+        width: auto;
+        height: auto;
+    }
+
+    .je-1{
+        flex-basis: 30%;
+    }
+
+    #coll{
+        height: auto;
+        flex-wrap: wrap ;
+    }
+
+    .coll-1{
+        flex-basis: 45%;
+        /* height: auto; */
+    }
+
+    #slid-2{
+        width: auto;
+    }
+    
+    .carousel-cell-2{
+        width: 30%;
+    }
+
+    #banner{
+        width: auto;
+        height: auto;
+    }
+
+    .carousel-cell-4{
+        width: 30%;
+    }
+
+    #info{
+        height: auto;
+    }
+
+    .in-1{
+        height: auto;
+    }
+
+    .in-1 button{
+        left: 30%;
+    }
+
+    .rivah{
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .ri-1{
+        width: auto;
+    }
+
+    .ri-2{
+        width: auto;
+    }
+
+}
+
+@media(max-width:768px){
+    #head{
+        width: auto;
+        height: auto;
+    }
+
+    .head-main{
+        width: auto;
+        height: auto;
+    }
+
+    #m-1{
+        flex-basis: 30%;
+        /* width: auto; */
+        height: auto;
+    }
+
+    .fot-1{
+        flex-basis: 50%;
+        text-align: center;
+    }
+
+    .carousel-cell-1{
+        width: 40%;
+    }
+
+    .carousel-cell-2{
+        width: 45%;
+    }
+
+    .carousel-cell-4{
+        width: 40%;
+    }
+
+    #info{
+        flex-wrap: wrap;
+    }
+
+    .in-1{
+        margin-top: 20px;
+        flex-basis: 80%;
+    }
+
+    .in-1 button{
+        left:40%;
+    }
+}
+
+@media(max-width:576px){
+    #m-1{
+        flex-basis: 45%;
+    }
+    .fot-1{
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    .carousel-cell-1{
+        width: 45%;
+    }
+
+    .coll-1{
+        flex-basis: 85%;
+    }
+
+}

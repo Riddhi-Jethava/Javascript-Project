@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanishq</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/media.css">
+
+    <!-- jquery cdn -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+    <!-- remix cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.1.0/remixicon.css" integrity="sha512-dUOcWaHA4sUKJgO7lxAQ0ugZiWjiDraYNeNJeRKGOIpEq4vroj1DpKcS3jP0K4Js4v6bXk31AAxAxaYt3Oi9xw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <!-- JavaScript -->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+</head>
+<body>
+
+    <header>
+        <div class="main">
+            <div class="logo">
+                <img src="./img/download (1).svg" alt="" class="h-75 w-75">
+            </div>
+
+            <div class="input">
+                <input type="text" placeholder="Search For Gold Jewellery, Diamond Jewellery and more..">
+                <i class="ri-polaroid-2-line"></i>
+                <i class="ri-mic-line"></i>
+                <i class="ri-search-line"></i>
+            </div>
+
+            <div class="hero-i">
+
+                <div class="h-1">
+                    <i class="ri-vip-diamond-fill"></i>
+                    <p>DIAMOND</p>
+                </div>
+                
+                <div class="h-1">
+                    <i class="ri-store-3-line"></i>
+                    <p>STORES</p>
+                </div>
+                
+                <div class="h-1">
+                    <i class="ri-user-line"></i>
+                    <p>ACCOUNT</p>
+                </div>
+
+                <div class="h-1">
+                   <a href="./cart.html" style="text-decoration: none; color: brown;" class="d-flex flex-column align-iteams-center">
+                    <i class="fa-regular fa-heart ms-2" id="cart"></i>
+                    <p>WISHLIST</p>
+                   </a>
+                </div>
+                
+                <div class="h-1">
+                    <a href="./index.html" style="text-decoration: none; color: brown;" class="d-flex flex-column align-iteams-center">
+                    <i class="ri-shopping-cart-2-line ms-1"></i>
+                    <p>CART</p>
+                </a>
+                </div>
+
+            </div>
+
+        </div>
+    </header>
+
+    <div class="header">
+    <section id="header">
+        <div class="logo-1 ms-2">
+            <img src="./img/download (2).svg" alt="" class="w-100 h-100">
+        </div>
+        <!-- <div class="ex">
+
+        </div> -->
+        <div class="hero-1-i">
+
+            <div class="h-1">
+                <i class="ri-vip-diamond-fill"></i>
+                <p>DIAMOND</p>
+            </div>
+            
+            <div class="h-1">
+                <i class="ri-store-3-line"></i>
+                <p>STORES</p>
+            </div>
+            
+            <!-- <div class="h-1">
+                <i class="ri-user-line"></i>
+                <p>ACCOUNT</p>
+            </div> -->
+
+            <div class="h-1">
+                <i class="fa-regular fa-heart"></i>
+                <p>WISHLIST</p>
+            </div>
+            
+            <div class="h-1">
+                <i class="ri-shopping-cart-2-line"></i>
+                <p>CART</p>
+            </div>
+        </div>
+
+        <div class="input-1">
+            <input type="text" placeholder="Search For Gold Jewellery, Diamond Jewellery and more..">
+            <i class="ri-polaroid-2-line"></i>
+            <i class="ri-mic-line"></i>
+            <i class="ri-search-line"></i>
+        </div>
+
+    </section>
+</div>
+
+    <section id="head">
+
+        <div class="head-main">
+            <ul>
+                <li>ALL JEWELLERY</li>
+                <li>GOLD</li>
+                <li>DIAMOND</li>
+                <li>EARRINGS</li>
+                <li>RINGS</li>
+                <li>BESTSELLERS</li>
+                <li>MIA</li>
+                <li>COLLECTIONS</li>
+                <li>WEDDING</li>
+                <li>GIFTING</li>
+                <li>GOLDENHARVEST</li>
+                <li>MORE</li>
+            </ul>
+        </div>
+
+    </section>
+
+     <section id="slid" class="container-filid border">
+
+        <div class="carousel" data-flickity='{ "autoPlay": 1500 ,
+        "wrapAround": true,"pageDots": false}'>
+            <div class="carousel-cell">
+                <img src="./img/colour-charms-desktop.jpg" alt="" class="w-100 h-100">
+            </div>
+            <div class="carousel-cell">
+                <img src="./img/fod-bannerd01.jpg" alt="" class="w-100 h-100">
+            </div>
+            <div class="carousel-cell">
+                <img src="img/gold-ex-desktop.jpg" alt="" class="w-100 h-100">
+            </div>
+            <div class="carousel-cell">
+                <img src="./img/rivaah-rb-desktop.jpg" alt="" class="w-100 h-100">
+            </div>
+            <div class="carousel-cell">
+                <img src="./img/vday-desktop.jpg" alt="" class="w-100 h-100">
+            </div>
+          </div>
+
+    </section> 
+
+    <section id="best" class="container-fulid text-center p-5">
+
+        <h2>Best of Tanishq</h2>
+
+        <p>Shop the year's most cherished products</p>
+
+        <img src="./img/Line-Design.svg" alt="">
+
+    </section>
+
+    <section id="slid-1" class="container">
+
+        <div class="carousel-1"
+     data-flickity='{ "freeScroll": true }'>
+
+        <div class="carousel-cell-1">
+            <div class="slid-img">
+                <img src="./img/50D3B2YRFAA32_1.jpg" alt="">
+            </div>
+            <h6 class="ms-1">Bold Square Diamond Ring</h6>
+            <p class="ms-1">₹ 60783</p>
+        </div>
+
+        <div class="carousel-cell-1">
+            <div class="slid-img">
+                <img src="./img/513220PQDAAA00_1.jpg" alt="">
+            </div>
+            <h6 class="ms-1">Classis Beaded Mangalsutra</h6>
+            <p class="ms-1">₹ 28158</p>
+        </div>
+
+        
+        <div class="carousel-cell-1">
+            <div class="slid-img">
+                <img src="./img/50G3I1FBUAA09_1.jpg" alt="">
+            </div>
+            <h6 class="ms-1">Bold Square Diamond Ring</h6>
+            <p class="ms-1">₹ 61030</p>
+        </div>
+
+        
+        <div class="carousel-cell-1">
+            <div class="slid-img">
+                <img src="./img/511250YIAAB00_1.jpg" alt="">
+            </div>
+            <h6 class="ms-1">Classis Beaded Mangalsutra</h6>
+            <p class="ms-1">₹ 56331</p>
+        </div>
+
+        
+        <div class="carousel-cell-1">
+            <div class="slid-img">
+                <img src="./img/511072CSGAA00_1.jpg" alt="">
+            </div>
+            <h6 class="ms-1">Simple Gold Chain for Kids</h6>
+            <p class="ms-1">₹ 25117</p>
+        </div>
+
+        
+        <div class="carousel-cell-1">
+            <div class="slid-img">
+                <img src="./img/50D2I2DWFAAA09_1.jpg" alt="">
+            </div>
+            <h6 class="ms-1">Refined Glam Diamond Drop Earrings</h6>
+            <p class="ms-1">₹ 33793</p>
+        </div>
+
+        
+        <div class="carousel-cell-1">
+            <div class="slid-img">
+                <img src="./img/50D2CADACAGA29_1.jpg" alt="">
+            </div>
+            <h6 class="ms-1">Enchanthing jacket Diamond and Pearl dro..</h6>
+            <p class="ms-1">₹ 37749</p>
+        </div>
+
+        
+        <div class="carousel-cell-1">
+            <div class="slid-img">
+                <img src="./img/511107CSOAA00_1.jpg" alt="">
+            </div>
+            <h6 class="ms-1">Magics Gold Chain</h6>
+            <p class="ms-1">₹ 85157</p>
+        </div>
+
+        
+        <div class="carousel-cell-1">
+            <div class="slid-img">
+                <img src="./img/50D3B31MEABA02_1.jpg" alt="">
+            </div>
+            <h6 class="ms-1">Extravagant Diamods Pendant and Earrin..</h6>
+            <p class="ms-1">₹ 89792</p>
+        </div>
+
+        
+        <div class="carousel-cell-1">
+            <div class="slid-img">
+                <img src="./img/50E3I1FHHAA02_1.jpg" alt="">
+            </div>
+            <h6 class="ms-1">Bold Minimal Diamonds Ring for Men</h6>
+            <p class="ms-1">₹ 54748</p>
+        </div>
+        
+</div>
+
+    </section>
+
+    
+    <section id="best" class="container-fulid text-center p-5">
+
+        <h2>Shop By Category</h2>
+
+        <p>Browse through your favorite categories. We've got them all!</p>
+
+        <img src="./img/Line-Design.svg" alt="">
+
+    </section>
+
+    <section id="jewe" class="container">
+
+        <div class="je-1 text-center">
+            <img src="./img/fod-earrings.jpg" alt="">
+            <h6 class="mt-3">Earrings</h6>
+            <p> <span>Explore</span> <i class="ri-arrow-right-s-line pt-2"></i></p>
+        </div>
+
+        <div class="je-1 text-center">
+            <img src="./img/fod-rings.jpg" alt="">
+            <h6 class="mt-3">Finger Rings</h6>
+            <p> <span>Explore</span> <i class="ri-arrow-right-s-line pt-2"></i></p>
+        </div>
+
+        <div class="je-1 text-center">
+            <img src="./img/fod-pendant-set.jpg" alt="">
+            <h6 class="mt-3">Pendant</h6>
+            <p> <span>Explore</span> <i class="ri-arrow-right-s-line pt-2"></i></p>
+        </div>
+
+        <div class="je-1 text-center">
+            <img src="./img/fod-nosepins.jpg" alt="">
+            <h6 class="mt-3">Nose Pins</h6>
+            <p> <span>Explore</span> <i class="ri-arrow-right-s-line pt-2"></i></p>
+        </div>
+
+        <div class="je-1 text-center">
+            <img src="./img/fod-mangalsutra.jpg" alt="">
+            <h6 class="mt-3">Mangalsutra</h6>
+            <p> <span>Explore</span> <i class="ri-arrow-right-s-line pt-2"></i></p>
+        </div>
+
+        <div class="je-1 text-center">
+            <img src="./img/fod-chain.jpg" alt="">
+            <h6 class="mt-3">Chain</h6>
+            <p> <span>Explore</span> <i class="ri-arrow-right-s-line pt-2"></i></p>
+        </div>
+
+        <!-- 2 -->
+
+        <div class="je-1 text-center">
+            <img src="./img/fod-gold-coins.jpg" alt="">
+            <h6 class="mt-3">Gold Coins</h6>
+            <p> <span>Explore</span> <i class="ri-arrow-right-s-line pt-2"></i></p>
+        </div>
+
+        <div class="je-1 text-center">
+            <img src="./img/fod-bracelet.jpg" alt="">
+            <h6 class="mt-3">Bracelet/h6>
+            <p> <span>Explore</span> <i class="ri-arrow-right-s-line pt-2"></i></p>
+        </div>
+
+        <div class="je-1 text-center">
+            <img src="./img/fod-bangle.jpg" alt="">
+            <h6 class="mt-3">Bangle</h6>
+            <p> <span>Explore</span> <i class="ri-arrow-right-s-line pt-2"></i></p>
+        </div>
+
+        <div class="je-1 text-center">
+            <img src="./img/fod-necklace.jpg" alt="">
+            <h6 class="mt-3">Nackwear</h6>
+            <p> <span>Explore</span> <i class="ri-arrow-right-s-line pt-2"></i></p>
+        </div>
+        
+        <div class="je-1 text-center">
+            <img src="./img/fod-necklace-set.jpg" alt="">
+            <h6 class="mt-3">Nackwear-set</h6>
+            <p> <span>Explore</span> <i class="ri-arrow-right-s-line pt-2"></i></p>
+        </div>
+
+        <div class="je-1 text-center">
+            <img src="./img/fod-pendants.jpg" alt="">
+            <h6 class="mt-3">Pendant-set</h6>
+            <p> <span>Explore</span> <i class="ri-arrow-right-s-line pt-2"></i></p>
+        </div>
+
+    </section>
+
+    <section id="coll" class="container">
+
+        <div class="coll-1">
+            <img src="./img/string-it.jpg" alt="">
+
+            <h5>String it</h5>
+
+            <p> <span>Explore More</span>  <i class="ri-arrow-right-s-line pt-2"></i> </p>
+
+        </div>
+
+        <div class="coll-1">
+            <img src="./img/italian-connection.jpg" alt="">
+
+            <h5>The Italian connection</h5>
+
+            <p> <span>Explore More</span>  <i class="ri-arrow-right-s-line pt-2"></i> </p>
+
+        </div>
+
+        <div class="coll-1">
+            <img src="./img/engagement-rings.jpg" alt="">
+
+            <h5>Engagement Rings</h5>
+
+            <p> <span>Explore More</span>  <i class="ri-arrow-right-s-line pt-2"></i> </p>
+
+        </div>
+
+    </section>
+
+    <section id="best" class="container-fulid text-center p-5">
+
+        <h2>Pick Up Where You Left Off!</h2>
+
+        <p>Our products tend to sell out quickly, so don't delay in completing your purchase.</p>
+
+        <img src="./img/Line-Design.svg" alt="">
+
+    </section>
+
+    <section id="slid-2" class="container border">
+        <div class="carousel" data-flickity='{ "groupCells": true }'>
+
+            <div class="carousel-cell-2">
+
+                <img src="./img/512216JHEABA00_1.jpg" alt="" class="w-100">
+
+                <span class="text-danger mt-3">Only 1 left in stock</span>
+
+                <h6 class="mt-3">Dainty Gold Jhumkas</h6>
+
+                <p class="fs-5">₹ 78535</p>
+
+            </div>
+           
+            <div class="carousel-cell-2">
+
+                <img src="./img/515090JCYABA00_1.jpg" alt="" class="w-100">
+
+                <span class="text-danger mt-3">Only 1 left in stock</span>
+
+                <h6 class="mt-3">Beguilling 22 karat yellow Gold...</h6> 
+
+                <p class="fs-5">₹ 44928</p>
+
+            </div>
+
+            <div class="carousel-cell-2">
+
+                <img src="./img/50D3B2SUWAGA32_1.jpg" alt="" class="w-100">
+
+                <span class="text-danger mt-3">Only 1 left in stock</span>
+
+                <h6 class="mt-3">Enigmatic Ruby and Diamonds Stud Earrings</h6>
+
+                <p class="fs-5">₹ 38016</p>
+
+            </div>
+           
+            <div class="carousel-cell-2">
+
+                <img src="./img/50D3B2YRFAA32_1.jpg" alt="" class="w-100">
+
+                <span class="text-danger mt-3">Only 1 left in stock</span>
+
+                <h6 class="mt-3">Sleek Floral Diamond Mangalsutra</h6>
+
+                <p class="fs-5">₹ 60783</p>
+
+            </div>
+
+            <div class="carousel-cell-2">
+
+                <img src="./img/51F1KPFMZAA00_1.jpg" alt="" class="w-100">
+
+                <span class="text-danger mt-3">Only 1 left in stock</span>
+
+                <h6 class="mt-3">Sailor Anchor Gold Finger Ring</h6>
+
+                <p class="fs-5">₹ 56582</p>
+
+            </div>
+           
+
+          </div>
+          
+    </section>
+
+    <section id="banner" class="container mt-3">
+        <img src="./img/gifting-banner-desktop-new.jpg" alt="" class="w-100 h-100">
+
+        <button>Explore Now</button>
+
+    </section>
+
+    
+    <section id="best" class="container-fulid text-center p-5">
+
+        <h2>Top Sellers</h2>
+
+        <p>Love the most to bought the most</p>
+
+        <img src="./img/Line-Design.svg" alt="">
+
+    </section>
+
+    <section id="slid-3" class="container">
+
+        <div class="carousel"
+        data-flickity='{ "freeScroll": true, "contain": true, "prevNextButtons": false, "pageDots": false }'>
+        
+        <div class="carousel-cell-4">
+            <img src="./img/600105ZGBRAS00_1.jpg" alt="" class="w-75 ms-5">
+            <br>
+            <span class="ms-2">1 gram</span>
+            <h6 class="mt-3 ms-2">1 gram 24 karat Gold Coin with lakshami..</h6>
+            <p class="mt-3 ms-2 ">₹ 7134</p>
+        </div>
+        
+        <div class="carousel-cell-4">
+            <img src="./img/600102ZFARAS00_1.jpg" alt="" class="w-75 ms-5">
+            <br>
+            <span class="ms-2">2 gram</span>
+            <h6 class="mt-3 ms-2">1 gram 24 karat Gold Coin with lakshami..</h6>
+            <p class="mt-3 ms-2 ">₹ 7134</p>
+        </div>
+
+        <div class="carousel-cell-4">
+            <img src="./img/600212ZCDRBS00_1.jpg" alt="" class="w-75 ms-5">
+            <br>
+            <span class="ms-2">25 gram</span>
+            <h6 class="mt-3 ms-2">1 gram 24 karat Gold Coin with lakshami..</h6>
+            <p class="mt-3 ms-2 ">₹ 7134</p>
+        </div>
+
+        <div class="carousel-cell-4">
+            <img src="./img/600102ZFARAS00_1.jpg" alt="" class="w-75 ms-5">
+            <br>
+            <span class="ms-2">5 gram</span>
+            <h6 class="mt-3 ms-2">1 gram 24 karat Gold Coin with lakshami..</h6>
+            <p class="mt-3 ms-2 ">₹ 7134</p>
+        </div>
+
+        <div class="carousel-cell-4">
+            <img src="./img/600102ZFARAS00_1.jpg" alt="" class="w-75 ms-5">
+            <br>
+            <span class="ms-2">10 gram</span>
+            <h6 class="mt-3 ms-2">1 gram 24 karat Gold Coin with lakshami..</h6>
+            <p class="mt-3 ms-2 ">₹ 7134</p>
+        </div>
+        
+</div>
+
+    </section>
+
+    <section id="best" class="container-fulid text-center p-5">
+
+        <h2>New For You!</h2>
+
+        <p>Our latest releases, just for you !</p>
+
+        <img src="./img/Line-Design.svg" alt="">
+
+    </section>
+
+    <section id="info" class="container border">
+
+        <div class="in-1">
+            <img src="./img/pretty-in-pink-new.jpg" alt="" class="w-100 h-100">
+            <button>Explore More </button>
+        </div>
+
+        <div class="in-1">
+            <img src="./img/trending-earrings.jpg" alt="" class="w-100 h-100">
+            <button>Explore More </button>
+        </div>
+
+        <div class="in-1">
+            <img src="./img/modern-designs.jpg" alt="" class="w-100 h-100">
+            <button>Explore More </button>
+        </div>
+
+    </section>
+
+    <section id="best" class="container-fulid text-center p-5">
+
+        <h2>Shop By Gender</h2>
+
+        <p>First-class jewelry for first-class Men, Women & Children.</p>
+
+        <img src="./img/Line-Design.svg" alt="">
+
+    </section>
+
+    
+    <section id="coll" class="container">
+
+        <div class="coll-1">
+            <img src="./img/Men.jpg" alt="">
+
+            <h5>MEN</h5>
+
+            <p> <span>Explore More</span>  <i class="ri-arrow-right-s-line pt-2"></i> </p>
+
+        </div>
+
+        <div class="coll-1">
+            <img src="./img/kid.jpg" alt="">
+
+            <h5>KID</h5>
+
+            <p> <span>Explore More</span>  <i class="ri-arrow-right-s-line pt-2"></i> </p>
+
+        </div>
+
+        <div class="coll-1">
+            <img src="./img/Woman.jpg" alt="">
+
+            <h5>WOMEN</h5>
+
+            <p> <span>Explore More</span>  <i class="ri-arrow-right-s-line pt-2"></i> </p>
+
+        </div>
+
+    </section>
+
+    <section id="banner" class="container mt-3">
+        <img src="./img/starburst-wo-desktop.png" alt="" class="w-100 h-100">
+
+        <button>Explore Now</button>
+
+    </section>
+
+    
+    <section id="info" class="container mt-5">
+
+        <div class="in-1">
+            <img src="./img/catalogue-11.jpg" alt="" class="w-100 h-100">
+            <button>Explore More </button>
+        </div>
+
+        <div class="in-1">
+            <img src="./img/catalogue-12.jpg" alt="" class="w-100 h-100">
+            <button>Explore More </button>
+        </div>
+
+        <div class="in-1">
+            <img src="./img/catalogue-13.jpg" alt="" class="w-100 h-100">
+            <button>Explore More </button>
+        </div>
+
+    </section>
+
+    <section id="rivah" class="container-fulid d-flex align-iteams-center justify-content-center mt-4">
+
+        <div class="rivah">
+            
+        <div class="ri-1 h-100 border">
+            <img src="./img/Rivaah-Bride.jpg" alt="" class="w-100 h-100">
+        </div>
+
+        <div class="ri-2 h-100 border">
+            <img src="./img/rivah_desktop.jpg" alt="">
+
+            <button id="bt-1"> Arrange a Callback</button>
+
+            <button id="bt-2">Explore Now</button>
+
+        </div>  
+        </div>
+
+    </section>
+
+
+    <footer class="container-fulid">
+
+        <div class="fot-1">
+            <ul>
+                <li><h5>Useful Links</h5></li> <br>
+                <li><a href="">Delivery Information</a></li>
+                <li><a href="">International Shipping</a></li>
+                <li><a href="">Payment Options</a></li>
+                <li><a href="">Track your Order</a></li>
+                <li><a href="">Returns</a></li>
+                <li><a href="">Find a Store</a></li>
+            </ul>
+        </div>
+
+        <div class="fot-1">
+            <ul>
+                <li><h5>Information</h5></li> <br>
+                <li><a href="">Careers</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">Offers & Contest Details</a></li>
+                <li><a href="">Help & FAQs</a></li>
+                <li><a href="">About Tanishq</a></li>
+            </ul>
+        </div>
+
+        <div class="fot-1">
+            <ul>
+                <li><h5>Contact Us</h5></li> <br>
+                <li><a href=""> <i class="ri-mail-line"></i> Write to Us</a></li>
+                <li><a href=""> <i class="ri-phone-line"></i> 1800-266-0123</a></li>
+                <li><a href=""> <i class="ri-chat-4-line"></i> Chat with Us</a></li>
+            </ul>
+        </div>
+
+        <div class="fot-1">
+            <h4>Download the Tanishq App Now</h4>
+            <br><br><br>
+            <img src="./img/appstore-d.png" alt="" style="width: 150px; height: 50px; margin-left: 20px;"> 
+            <img src="./img/Component 145 – 1@2x.png" alt="" style="width: 150px; height: 50px;">
+        </div>
+
+    </footer>
+
+</body>
+</html>
